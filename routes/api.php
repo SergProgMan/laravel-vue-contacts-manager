@@ -37,7 +37,7 @@ Route::group(['middleware' => 'api'], function(){
     });
 
     //update Contact
-    Route::patch('contact/{id}', function(Request $request, $id){
+    Route::patch('contact/{id}', function(Request $request, $id){ 
         Contact::findOrFail($id)->update(['name' => $request->input(['name']), 
         'email' => $request->input(['email']),
         'phone' => $request->input(['phone'])]);
